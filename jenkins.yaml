@@ -1,12 +1,4 @@
 unclassified:
-  hibernationConfiguration:
-    activities:
-    - "build"
-    - "web"
-    enabled: true
-    gracePeriod: 36000
-  gitHubConfiguration:
-    apiRateLimitChecker: ThrottleForNormalize
   globallibraries:
     libraries:
     - defaultVersion: "master"
