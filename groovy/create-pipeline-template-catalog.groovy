@@ -55,48 +55,6 @@ if (insuranceFrontendJob == null) {
       </instance>
     </com.cloudbees.pipeline.governance.templates.classic.multibranch.GovernanceMultibranchPipelinePropertyImpl>
   </properties>
-  <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.6.5">
-    <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.." />
-  </folderViews>
-  <healthMetrics />
-  <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api@2.6.5">
-    <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.." />
-  </icon>
-  <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.16">
-    <pruneDeadBranches>true</pruneDeadBranches>
-    <daysToKeep>-1</daysToKeep>
-    <numToKeep>-1</numToKeep>
-  </orphanedItemStrategy>
-  <triggers>
-    <com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger plugin="cloudbees-folder@6.16">
-      <spec>H H/4 * * *</spec>
-      <interval>86400000</interval>
-    </com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger>
-  </triggers>
-  <disabled>false</disabled>
-  <sources>
-    <jenkins.branch.BranchSource plugin="branch-api@2.6.5">
-      <source class="org.jenkinsci.plugins.github_branch_source.GitHubSCMSource" plugin="github-branch-source@2.11.2">
-        <id>React</id>
-        <apiUri>https://api.github.com</apiUri>
-        <credentialsId>github-sa</credentialsId>
-        <repoOwner>cb-demos</repoOwner>
-        <repository>insurance-frontend</repository>
-        <traits>
-          <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-            <strategyId>1</strategyId>
-          </org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-          <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-            <strategyId>1</strategyId>
-          </org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-          <org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-            <strategyId>1</strategyId>
-            <trust class="org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission" />
-          </org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-        </traits>
-      </source>
-    </jenkins.branch.BranchSource>
-  </sources>
   <factory class="com.cloudbees.pipeline.governance.templates.classic.multibranch.FromTemplateBranchProjectFactory" plugin="cloudbees-workflow-template@3.12">
     <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.." />
     <catalogName>cb-demo</catalogName>
@@ -141,42 +99,6 @@ if (insuranceFrontendJob == null) {
       </instance>
     </com.cloudbees.pipeline.governance.templates.classic.multibranch.GovernanceMultibranchPipelinePropertyImpl>
   </properties>
-  <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api@2.6.5">
-    <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.." />
-  </icon>
-  <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.16">
-    <pruneDeadBranches>true</pruneDeadBranches>
-  </orphanedItemStrategy>
-  <triggers>
-    <com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger plugin="cloudbees-folder@6.16">
-      <spec>H H/4 * * *</spec>
-      <interval>86400000</interval>
-    </com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger>
-  </triggers>
-  <disabled>false</disabled>
-  <sources>
-    <jenkins.branch.BranchSource plugin="branch-api@2.6.5">
-      <source class="org.jenkinsci.plugins.github_branch_source.GitHubSCMSource" plugin="github-branch-source@2.11.2">
-        <id>Python</id>
-        <apiUri>https://api.github.com</apiUri>
-        <credentialsId>github-sa</credentialsId>
-        <repoOwner>cb-demos</repoOwner>
-        <repository>insurance-backend</repository>
-        <traits>
-          <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-            <strategyId>1</strategyId>
-          </org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-          <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-            <strategyId>1</strategyId>
-          </org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-          <org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-            <strategyId>1</strategyId>
-            <trust class="org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission" />
-          </org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-        </traits>
-      </source>
-    </jenkins.branch.BranchSource>
-  </sources>
   <factory class="com.cloudbees.pipeline.governance.templates.classic.multibranch.FromTemplateBranchProjectFactory" plugin="cloudbees-workflow-template@3.12">
     <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.." />
     <catalogName>cb-demo</catalogName>
