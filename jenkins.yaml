@@ -1,0 +1,23 @@
+unclassified:
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 36000
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  globallibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "cb-days"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              credentialsId: "github-sa"
+              repoOwner: "cb-demos"
+              repository: "pipeline-library"
+groovy:
+  - url: https://raw.githubusercontent.com/cb-demos/casc-bundle/main/groovy/create-pipeline-template-catalog.groovy
+  - url: https://raw.githubusercontent.com/cb-demos/casc-bundle/main/groovy/create-unhibernate-job.groovy
